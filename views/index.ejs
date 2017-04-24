@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>欢迎来到Q-A</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% include header %>
+    <div class="container">
+        <div class="nav-bar">
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="#">最新问答</a></li>
+            <li role="presentation"><a href="#">已解决问题</a></li>
+          </ul>
+
+          <script>
+            $('.nav-bar>.nav>li').hover(function(){
+              $(this).css('border-bottom','4px solid gray')
+            },function(){
+              $(this).css('border','none')
+            });
+
+            //socket.io怎样在框架中引用.
+            // var socket = io();
+            // $('.nav-bar>.nav>li:nth-child(1)').click(function(){
+            //   console.log('所有问答被点击');
+            //   socket.emit('question');
+            //   socket.on('q_res',function(data){
+            //     console.log(data);
+            //   });
+            // });
+
+            // $('.nav-bar>.nav>li:nth-child(2)').click(function(){
+            //   console.log('已解决问题被点击');
+            // })
+          </script>
+        </div>
+    </div>
   </body>
 </html>
