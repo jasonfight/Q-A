@@ -1,60 +1,88 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title注册界面</title>
+<head>
+		<meta charset="utf-8">
+		<link href="stylesheets/register-style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style media="screen">
-      .container{margin-top:100px;}
-    </style>
-  </head>
-  <body>
+</head>
+<body>
+	<div class="main">
+		<div class="header" >
+			<h1>欢迎注册~</h1>
+		</div>
+			<form>
+				<ul class="form">
+					<h2>账户信息:</h2>
+					<li>
+						<input type="text" name='account'  placeholder="Username" required/>
+						<button type="button"class='account_test' name="account_test">账号检测</button>
+					</li>
 
-    <div class="container">
-      <form class="navbar-form" action="#" method="get">
-        账号:<input type="text" name="" value=""> <br><br>
-        昵称:<input type="text" name="" value=""> <br><br>
-        密码:<input id='passwd_1' type="password" name="" default='123456' > <br><br>
-        密码确认:<input id='passwd_2' type="password" name=""  default='123456'> <br><br>
+					<script type="text/javascript">
+						$('.account_test').click(function(){
+							console.log('准备账号检测');
+						});
+					</script>
+					<li>
+						<input type="email" name='email'  placeholder="Email" required/>
+					</li>
+					<li>
+						<input type="password" id='passwd'   placeholder="password" required/>
+					</li>
+					<li>
+						<input type="password" id='passwd_1'  placeholder="password" required/>
+					</li>
+					  <script type="text/javascript">
 
-        <button type="submit" name="button">提交</button>
-        <script type="text/javascript">
-
-          $('#passwd_2').blur(function(){
+          $('#passwd_1').blur(function(){
+            var passwd = $('#passwd').val();
             var passwd_1 = $('#passwd_1').val();
-            var passwd_2 = $('#passwd_2').val();
             console.log($(this).val());
-            console.log($('#passwd_1').val());
-            if (passwd_1 != passwd_2) {
+            console.log($('#passwd').val());
+            if (passwd != passwd_1) {
               console.log('heheh');
-                var data = '<span style="color:red">前后输入的密码不一致,请重新输入!</span>';
-
-                  if ($('#passwd_1+span').val() != null){
-                    console.log($('#passwd_1+span').val());
+                var data = '<span style="color:red">密码不一致!</span>';
+                  if ($('#passwd+span').val() != null){
+                    console.log($('#passwd+span').val());
                   }else{
-                    $(data).insertAfter('#passwd_1');
+                    $(data).insertAfter('#passwd');
                   };
             }else{
               console.log('密码确认');
-              $('#passwd_1+span').remove();
+              $('#passwd+span').remove();
             }
           })
-        //提交按钮单击事件
-          // $('[type="submit"]').click(function(){
-          //     console.log(passwd_1);
-          //     console.log(passwd_2);
-          //     if (passwd_1 != passwd_2) {
-          //       var data = '<span style="color:red">前后输入的密码不一致,请重新输入!</span>';
-          //       $(data).insertAfter('#passwd_1');
-          //       return false;
-          //     }
-          //   });
-        </script>
-      </form>
-    </div>
-  </body>
+					</script>
+					<h2>个人信息:</h2>
+					<li>
+						<input type="text" name='nickname' placeholder="昵称" >
+					</li>
+					<li>
+						<input type="text" name='gender' placeholder="性别" >
+					</li>
+					<li>
+						<input type="text" name='age' placeholder="年龄" >
+					</li>
+					<li>
+						<input type="text"  name='tel' placeholder="电话" >
+					</li>
+					<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> 同意并接受     <a href="#">《服务条款》</a></i></label>
+					<input type="submit" value="提交信息">
+						<div class="clear"> </div>
+				</ul>
+				<div class="clear"> </div>
+
+			</form>
+
+		</div>
+
+
+
+</body>
 </html>

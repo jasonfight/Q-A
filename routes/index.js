@@ -17,11 +17,17 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/register',function(req,res,next){
 
-  res.render('register')
+router.get('/register',function(req,res,next){
+    var account = req.query.content
+    if (account == 'jason') {
+    }
+    res.render('register',{title:'hello',message:'hello'})
 })
 
+router.get('/login',function(req,res,next){
+  res.render('login')
+})
 
 router.get('/about',function(err,res,next){
   res.render('about');
