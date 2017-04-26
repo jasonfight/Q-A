@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>problem</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+        .oMang {
+            border: 1px solid rgb(8, 151, 242);
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <% include heard %>
+        <nav class="container">
+            <div class="col-sm-8">
+
+                <h2><img src="" alt="此处应该有图" /> <span>This is question</span></h2>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-primary">标签</button>
+
+                <!-- Indicates a successful or positive action -->
+                <button type="button" class="btn btn-success">标签</button>
+
+                <!-- Contextual button for informational alert messages -->
+                <button type="button" class="btn btn-info">标签</button>
+
+                <!-- Indicates caution should be taken with this action -->
+                <button type="button" class="btn btn-warning">标签</button>
+
+                <!-- Indicates a dangerous or potentially negative action -->
+                <button type="button" class="btn btn-danger">标签</button>
+                <span>俩小时前提问</span>
+                <hr />
+
+                <button type="button" class="btn btn-info">收藏&nbsp;<span>0</span></button>
+                <button type="button" class="btn btn-success">关注&nbsp;<span>0</span></button>
+                <button type="button" class="btn btn-danger">赞&nbsp;<span style="color:orange">0</span></button>
+                <hr />
+                <p>This is a problem substance</p>
+                <img src="" alt="这里可以有图片">
+                <p><span>2个小时提前</span>&nbsp;&nbsp;<span>编译</span>&nbsp;&nbsp;<span><a href="#">更多</a></span></p>
+                <!-- <div class="oMang">
+       <p>举报</p>
+       <p>关闭</p>
+     </div> -->
+                <hr />
+                <h4><span>0</span>个<span>答案</span></h4>
+                <hr style="border-top:2px solid lightgray;" />
+                <div class="">
+                    <p>This is 答案</p>
+                    <img src="" alt="此处是头像" />
+                    <span>余宏图</span>
+                    <p><span>2个小时提前</span>&nbsp;&nbsp;<span>编译</span>&nbsp;&nbsp;<span><a href="#">更多</a></span></p>
+                </div>
+
+                <hr />
+                <h4>撰写答案</h4>
+                <textarea name="name" rows="8" cols="80%"></textarea>
+                <br>
+                <button class="btn btn-primary" type="button">提交</button>
+            </div>
+            <div class="col-sm-4">
+              <br><br>
+              <h4>问题达人</h4>
+              <hr />
+              <p><span><a href="#">爱你没烦恼</a></span><span style="float:right" class="badge">200</span></p>
+              <p><span><a href="#">爱你没烦恼</a></span><span style="float:right" class="badge">200</span></p>
+              <p><span><a href="#">爱你没烦恼</a></span><span style="float:right" class="badge">200</span></p>
+              <p><span><a href="#">爱你没烦恼</a></span><span style="float:right" class="badge">200</span></p>
+              <hr />
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">14</span> Cras justo odio
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">14</span> Cras justo odio
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">14</span> Cras justo odio
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <% include footer %>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classification</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+    .tag-list{
+      border-bottom: 1px solid #eee;
+    }
+    .tag{
+      border: 1px solid rgb(8,151,242);
+      background: rgb(8,151,242);
+      color: white;
+     }
+    .nav-tabs > li{
+      padding: 1px;
+      margin: 1px;
+    }
+
+    </style>
+</head>
+<body>
+   <% include heard %>
+   <nav class="container">
+     <hr />
+     <h3>标签</h3>
+     <p>标签不仅能组织和归类你的内容，还能关联相似的内容。正确的使用标签将让你的问题被更多人发现和解决。</p>
+     <br>
+     <p><h4>常用标签<span style="font-size:16px">&nbsp;&nbsp;<a href="#">全部</a></span></h4></p>
+     <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">ios 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ios</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">objective-c</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">sqlite</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">safari</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">xcode</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">swift</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">phonegap</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">cocoa</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">javascript</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">macos</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">iphone</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ipad</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">开发语言</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">java</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">c</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">c++</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">php</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">perl</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">python</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">javascript</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">c#</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ruby</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">objective-c</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">go</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">lua</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">node.js</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">erlang</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">scala</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">bash</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">actionscript</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">前端开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">html</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">html5</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">css</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">css3</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">javascript</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">jquery</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">json</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ajax</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">正则表达式</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">bootstrap</a></li>
+    </ul>
+  </div>
+
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">JavaScript 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">javascript</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">jquery</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">node.js</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">chrome</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">firefox</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">internet-explorer</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">angular.js</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">typescript</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ecmascript</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">vue.js</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">react.js</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">Android 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">android</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">java</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">scilpse</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">xml</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">phonegap</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">json</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">webwiew</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">android-studio</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">PHP 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">php</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">mysql</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">apache</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">nginx</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">mvc</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">codeigniter</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">symfony</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">zend-framework</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">composer</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">laravel</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">数据库</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">数据库</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">mysql</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">sqlite</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">oracle</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">sql</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">nosql</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">redis</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">mongodb</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">memcached</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">postgresql</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">.NET 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">.net</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">c#</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">asp.net</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">visual-studio</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">mvc</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">microsoft</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">Python 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">python</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">list</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">django</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">flask</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">tornado</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">web.py</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">sqlalchemy</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">virtualenv</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">Ruby 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ruby</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ruby-on-rails</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">rubygems</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">rvm</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">macosx</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">bundle</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">开发工具</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">vim</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">emacs</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ide</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">eclipse</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">xcode</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">intellij-idea</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">textmate</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">sublime-text</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">visual-studio</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">git</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">github</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">svn</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">hg</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">docker</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ci</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">云计算</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">云计算</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">又拍云存储</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">七牛云存储</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">google-app-engine</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">sina-app-engine</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">amazon-web-services</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">百度云</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">金山云</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">美团云</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">腾讯云</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">JAVA 开发</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">java</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">java-ee</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">jar</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">spring</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">hibernate</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">struts</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">tomcat</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">maven</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">eclipse</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">intellij-idea</a></li>
+  </div>
+</ul>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">搜索</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">搜索引擎</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">中文分词</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">全文检索</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">lucene</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">solr</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">sphinx</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">analyzer</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">elasticsearch</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">开放平台</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">新浪微博</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">人人网</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">微信</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">腾讯微博</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">百度</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">facebook</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">twitter</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <h3 class="h5 tag-list">服务器</h3>
+    <ul class="nav nav-tabs">
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">linux</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">unix</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ubuntu</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">windows-server</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">centos</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">负载均衡</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">缓存</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">apache</a></li>
+      <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">nginx</a></li>
+    </ul>
+  </div>
+</div>
+<br><br><br>
+   </nav>
+   <% include footer %>
+</body>
+</html>

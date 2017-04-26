@@ -9,14 +9,15 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
+		<script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-	<div class="main">
+	<div class="main container">
 		<div class="header" >
-			<h1>欢迎注册~</h1>
+			<h1>欢迎注册~,来吧	</h1>
 		</div>
-			<form>
+			<form action="/login">
 				<ul class="form">
 					<h2>账户信息:</h2>
 					<li>
@@ -72,17 +73,11 @@
 					<li>
 						<input type="text"  name='tel' placeholder="电话" >
 					</li>
-					<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> 同意并接受     <a href="#">《服务条款》</a></i></label>
-					<input type="submit" value="提交信息">
+					<input type="submit" class='btn btn-info' value="提交信息">
 						<div class="clear"> </div>
 				</ul>
 				<div class="clear"> </div>
-
 			</form>
-
 		</div>
-
-
-
 </body>
 </html>

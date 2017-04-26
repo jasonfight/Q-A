@@ -8,10 +8,16 @@ a{text-decoration:none;}
 body{
 	background:#eee;
 }
+
+body{
+	background: url('/images/bg3.jpg');
+}
+
 .main{
+	margin: auto;
 	margin:7em auto 0;
 	width:80%;
-	background: #fff;
+	background:;
 }
 .header {
 	text-align:center;
@@ -40,7 +46,7 @@ body{
 }
 
 .form{
-	margin:22px 20px;
+	margin:auto;;
 	width:40%;
 }
 .form input[type=text],.form input[type=email],.form input[type=password] {
@@ -61,7 +67,6 @@ form{
 .form li{
 	display:block;
 	color:#4D4949;
-	border:1px solid #EBEBEB;
 	border-radius: 0.3em;
 	-webkit-border-radius:0.3em;
   	-moz-border-radius:0.3em;

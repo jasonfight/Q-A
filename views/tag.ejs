@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>标签问题</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+    li{
+    margin-left: 20px;
+    }
+    span{
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+   <% include heard %>
+       <nav class="container">
+         <div class="col-sm-8">
+         <h1>JavaScript <button class="btn btn-info">关注</button></h1>
+         <hr />
+         <p>JavaScript 是一门弱类型的动态脚本语言，支持多种编程范式，包括面向对象和函数式编程，被广泛用于 web 开发。<a href="#">[更多]</a></p>
+         <ul class='nav nav-tabs'>
+           <li><h3><i class="glyphicon glyphicon-question-sign"> <span> 问答</span></i></h3></li>
+           <li><h3><i class="glyphicon glyphicon-duplicate"> <span> 文章</span></i></h3></li>
+         </ul>
+         <br>
+         <p>排序: <button class="btn btn-info">时间</button> <button class="btn btn-info">得票数</button> <button class="btn btn-info">未回答</button> <button class="btn btn-info">未解决</button></p>
+         <div class="col-sm-8 col-md-6">
+           <div class="thumbnail alert-info">
+             <div class="caption">
+               <h3><a href="#">This is problem</a></h3>
+               <p><span><a href="#">This is name</a></span><span>&nbsp;</span><span><a href="#">This is Time</a></span></p>
+               <p>赞<span>0</span> 踩<span>0</span></p>
+               <p>浏览数<span>0</span> 状态:<o>未解决</o></p>
+               <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-success" role="button">关注</a></p>
+             </div>
+           </div>
+         </div>
+
+         <div class="col-sm-8 col-md-6">
+           <div class="thumbnail alert-info">
+             <div class="caption">
+               <h3><a href="#">This is problem</a></h3>
+               <p><span><a href="#">This is name</a></span><span>&nbsp;</span><span><a href="#">This is Time</a></span></p>
+               <p>赞<span>0</span> 踩<span>0</span></p>
+               <p>浏览数<span>0</span> 状态:<o>未解决</o></p>
+               <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-success" role="button">关注</a></p>
+             </div>
+           </div>
+         </div>
+
+         <div class="col-sm-8 col-md-6">
+           <div class="thumbnail alert-info">
+             <div class="caption">
+               <h3><a href="#">This is problem</a></h3>
+               <p><span><a href="#">This is name</a></span><span>&nbsp;</span><span><a href="#">This is Time</a></span></p>
+               <p>赞<span>0</span> 踩<span>0</span></p>
+               <p>浏览数<span>0</span> 状态:<o>未解决</o></p>
+               <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-success" role="button">关注</a></p>
+             </div>
+           </div>
+         </div>
+
+         <div class="col-sm-8 col-md-6">
+           <div class="thumbnail alert-info">
+             <div class="caption">
+               <h3><a href="#">This is problem</a></h3>
+               <p><span><a href="#">This is name</a></span><span>&nbsp;</span><span><a href="#">This is Time</a></span></p>
+               <p>赞<span>0</span> 踩<span>0</span></p>
+               <p>浏览数<span>0</span> 状态:<o>未解决</o></p>
+               <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-success" role="button">关注</a></p>
+             </div>
+           </div>
+         </div>
+
+         <div class="col-sm-8 col-md-6">
+           <div class="thumbnail alert-info">
+             <div class="caption">
+               <h3><a href="#">This is problem</a></h3>
+               <p><span><a href="#">This is name</a></span><span>&nbsp;</span><span><a href="#">This is Time</a></span></p>
+               <p>赞<span>0</span> 踩<span>0</span></p>
+               <p>浏览数<span>0</span> 状态:<o>未解决</o></p>
+               <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-success" role="button">关注</a></p>
+             </div>
+           </div>
+         </div>
+
+         <div class="col-sm-8 col-md-6">
+           <div class="thumbnail alert-info">
+             <div class="caption">
+               <h3><a href="#">This is problem</a></h3>
+               <p><span><a href="#">This is name</a></span><span>&nbsp;</span><span><a href="#">This is Time</a></span></p>
+               <p>赞<span>0</span> 踩<span>0</span></p>
+               <p>浏览数<span>0</span> 状态:<o>未解决</o></p>
+               <p><a href="#" class="btn btn-primary" role="button">收藏</a> <a href="#" class="btn btn-success" role="button">关注</a></p>
+             </div>
+           </div>
+         </div>
+
+       </div>
+       <div class="col-sm-4 visible-lg visible-md">
+         <!-- <br><br> -->
+         <!-- <div><p>广告预留位置</p></div> -->
+         <br><br>
+         <h4>相关标签</h4>
+         <hr />
+         <ul class="nav nav-tabs">
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">javascript</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">jquery</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">node.js</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">chrome</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">firefox</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">internet-explorer</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">angular.js</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">typescript</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">ecmascript</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">vue.js</a></li>
+           <li><a href="" style="padding:3px 7px;border-radius:5px;" class="tag">react.js</a></li>
+         </ul>
+         <br>
+         <span style="font-size:19px;">积分排行榜</span><span style="float:right;"><span>本月</span>|<span>全部</span></span>
+         <hr>
+         <h4><span>名人排行榜</span></h4>
+
+       </div>
+       </nav>
+   <% include footer %>
+</body>
+</html>

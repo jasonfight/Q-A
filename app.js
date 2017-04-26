@@ -1,4 +1,9 @@
 var express = require('express');
+var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -8,8 +13,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var app = express();
-var http = require('http');
+var db = require('./database/index');
+
 
 
 
@@ -20,7 +25,7 @@ app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+// app.use(logger('dev')); // NOTE:注释掉此行,可以进行log输出.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -47,5 +52,16 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.listen(3000);
-module.exports = app;
+
+http.listen(3000,function(){
+  console.log('监听端口3000....');
+});
+
+
+io.on('connection',function(socket){
+  socket.emit('shijian1',{hello:'nihao'});
+  socket.on('shijian2',function(data){
+    // console.log(data);
+  });
+  socket.emit('shijian3',{nihao:'222222'});
+  });

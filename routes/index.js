@@ -1,36 +1,59 @@
 var express = require('express');
 var router = express.Router();
-
-// var io = require('socket.io');
-
 var db = require('../database');
-/* GET home page. */
-router.get('/', function(req, res, next) {
 
-  //socket.io怎样在框架中引用.
-  // io.on('connection',function(socket){
-  //   socket.on('qutstion',function(){
-  //     socket.emit('q_res','hello')
-  //   });
-  //
-  // });
-  res.render('index', { title: 'Express' });
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.render('index')
 });
 
+router.post('/',function(req,res,next){
+
+    var account = req.body.account;//前端传过来的用户名
+    var password = req.body.password;//前端传过来的密码
+    console.log(account);
+    console.log(password);
+    db.User.findOne({account:account},function(err,data){
+
+      if (data != null && account == data.account && password == data.password) {
+          res.render('index')
+      }else{
+          res.render('login',{info:'账号密码错误,请重新输入'})
+      }
+
+    });
+
+})
+router.get('/tag',function(req,res,next){
+  res.render('tag')
+})
+
+router.get('/Classification',function(req,res,next){
+  res.render('Classification')
+})
+
+router.get('/personal',function(req,res,next){
+  res.render('personal')
+})
+
+router.get('/answer',function(req,res,next){
+  res.render('answer')
+})
+
+router.get('/problem',function(req,res,next){
+  res.render('problem')
+})
 
 router.get('/register',function(req,res,next){
-    var account = req.query.content
-    if (account == 'jason') {
-    }
-    res.render('register',{title:'hello',message:'hello'})
+  res.render('register')
 })
 
 router.get('/login',function(req,res,next){
-  res.render('login')
+  res.render('login',{info:''})
 })
 
-router.get('/about',function(err,res,next){
-  res.render('about');
+router.get('/error',function(req,res,next){
+  res.render('error');
 })
 
 module.exports = router;

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>问答系统</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+        body {
+            margin: 0;
+            padding: 0;
+            width: auto;
+            height: auto;
+            /*background-color: rgb(8,151,242);*/
+        }
+
+        .e {
+            margin-top: 20px;
+        }
+
+        .g {
+            /*background-color: rgb(8,102,242);*/
+        }
+        .oi{
+          background:rgb(8,151,242);
+          color: white;
+          box-shadow: 0px 0px 1px rgb(8,151,242),-0px -0px 1px rgb(8,151,242);
+        }
+    </style>
+</head>
+
+<body>
+    <% include heard %>
+    <br>
+        <div class="w container">
+            <div class="w">
+                <form class="" action="index.html" method="post">
+
+                    <div class="col-md-10 col-sm-10 col-xs-12">
+                        <div class="input-group ">
+                            <span class="input-group-addon oi" id="basic-addon1"><strong>标题:</strong></span>
+                            <input type="text" class="form-control" placeholder="一句话说清楚,用问号结尾" aria-describedby="basic-addon1">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span  class="input-group-addon oi" id="basic-addon1"><strong>标签:</strong></span>
+                            <input type="text" class="form-control" placeholder="如:php可使用逗号,分号;分隔" aria-describedby="basic-addon1">
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 e col-sm-12 col-xs-12">
+                        <!-- 加载编辑器的容器 -->
+                        <textarea name="name" rows="10" cols="100%"></textarea>
+                        <br>
+                        <br>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="submit" class="btn btn-info">发布问题</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- 配置文件 -->
+        <script type="text/javascript" src="/utf8-php/ueditor.config.js"></script>
+        <!-- 编辑器源码文件 -->
+        <script type="text/javascript" src="/utf8-php/ueditor.all.js"></script>
+        <!-- 实例化编辑器 -->
+        <script type="text/javascript">
+            var ue = UE.getEditor('container');
+        </script>
+        <% include footer %>
+</body>
+<script type="text/javascript">
+  $(function(){
+    var socket = io();
+    $('form').submit(function(){
+      socket.emit('pro_put','data')
+    });
+
+  });
+</script>
+</html>
