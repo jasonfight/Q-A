@@ -17,7 +17,7 @@
 		<div class="header" >
 			<h1>欢迎注册~,来吧	</h1>
 		</div>
-			<form action="/login">
+			<form action="/register" method='post' >
 				<ul class="form">
 					<h2>账户信息:</h2>
 					<li>
@@ -34,31 +34,31 @@
 						<input type="email" name='email'  placeholder="Email" required/>
 					</li>
 					<li>
-						<input type="password" id='passwd'   placeholder="password" required/>
+						<input type="password" id='passwd' name='password'  placeholder="password" required/>
 					</li>
 					<li>
 						<input type="password" id='passwd_1'  placeholder="password" required/>
 					</li>
 					  <script type="text/javascript">
 
-          $('#passwd_1').blur(function(){
-            var passwd = $('#passwd').val();
-            var passwd_1 = $('#passwd_1').val();
-            console.log($(this).val());
-            console.log($('#passwd').val());
-            if (passwd != passwd_1) {
-              console.log('heheh');
-                var data = '<span style="color:red">密码不一致!</span>';
-                  if ($('#passwd+span').val() != null){
-                    console.log($('#passwd+span').val());
-                  }else{
-                    $(data).insertAfter('#passwd');
-                  };
-            }else{
-              console.log('密码确认');
-              $('#passwd+span').remove();
-            }
-          })
+				          $('#passwd_1').blur(function(){
+				            var passwd = $('#passwd').val();
+				            var passwd_1 = $('#passwd_1').val();
+				            console.log($(this).val());
+				            console.log($('#passwd').val());
+				            if (passwd != passwd_1) {
+				              console.log('heheh');
+				                var data = '<span style="color:red">密码不一致!</span>';
+				                  if ($('#passwd+span').val() != null){
+				                    console.log($('#passwd+span').val());
+				                  }else{
+				                    $(data).insertAfter('#passwd');
+				                  };
+				            }else{
+				              console.log('密码确认');
+				              $('#passwd+span').remove();
+				            }
+				          })
 					</script>
 					<h2>个人信息:</h2>
 					<li>

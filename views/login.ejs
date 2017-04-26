@@ -18,7 +18,10 @@
 		</div>
 			<form action="/" method='post'>
 				<ul class="form" >
-					<li>  <%= info %></li>
+
+					<% if (info) { %>
+						<li>  <%= info %></li>
+					<%	}%>
 					<li>
 						<input type="text" name='account'  placeholder="Username" required/>
 					</li>
